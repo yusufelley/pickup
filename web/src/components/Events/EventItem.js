@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import "./EventItem.css";
 import CounterButton from "../CounterButton";
 import { useState } from "react";
+import { FaMapMarkedAlt } from "react-icons/fa";
 
 const EventItem = (props) => {
   const [hereToggled, setHereToggled] = useState(false);
@@ -10,27 +11,21 @@ const EventItem = (props) => {
   return (
     <Card className="expense-item">
       <EventDate sport={props.sport} />
-      <div className="location"> {props.location} </div>
+      <div className="location">
+        {" "}
+        <FaMapMarkedAlt /> {props.location}{" "}
+      </div>
       <div className="eventProperties">
         <div className="startAndDuration">
-          <p> Started At- {props.time}</p>
+          <p> Started at {props.time}</p>
           <p className="playing">
             {" "}
-            Playing For-{Math.floor(props.duration / 60)}h and{" "}
+            Playing for {Math.floor(props.duration / 60)}h and{" "}
             {props.duration % 60}m
           </p>
         </div>
         <div className="numsHereComing">
-          <CounterButton
-            text={"Here"}
-            hereToggled={hereToggled}
-            setHereToggled={setHereToggled}
-          />
-          <CounterButton
-            text={"Coming"}
-            hereToggled={hereToggled}
-            setHereToggled={setHereToggled}
-          />
+          <CounterButton />
         </div>
       </div>
     </Card>
