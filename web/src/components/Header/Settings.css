@@ -1,0 +1,39 @@
+.Settings{
+    color: white;
+    background-color: rgb(31, 31, 31);
+    width: 90vw;
+    height: 200p;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: left;
+    opacity: 0.95;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.Settings .closeButton {
+    color: white;
+    text-align: center;
+    height: 3vh;
+    background: #721010;
+    width: 100%;
+    display: flex;
+    margin: auto; 
+    padding: 0rem 1rem;
+  }
+
+.Settings .Submit {
+    color: white;
+    text-align: center;
+    height: 3vh;
+    background: #721010;
+    padding: 0rem 1rem;
+    width: 100%;
+    display: flex;
+    margin: auto; 
+  }
+
+
