@@ -1,12 +1,12 @@
-import ExpenseDate from "./ExpenseDate";
+import EventDate from "./EventDate";
 import Card from "../UI/Card";
-import "./ExpenseItem.css";
+import "./EventItem.css";
 
-const ExpenseItem = (props) => {
+const EventItem = (props) => {
   return (
     <li>
       <Card className="expense-item">
-        <ExpenseDate date={props.date} />
+        <EventDate date={props.date} />
         <div className="expense-item__description">
           <h2>{props.title}</h2>
           <div className="expense-item__price">${props.amount}</div>
@@ -16,4 +16,4 @@ const ExpenseItem = (props) => {
   );
 };
 
-export default ExpenseItem;
+export default EventItem;

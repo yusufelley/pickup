@@ -1,10 +1,10 @@
 import React from "react";
-import "./ExpenseFilter.css";
+import "./EventFilter.css";
 
-const ExpenseFilter = (props) => {
-    const yearChangeHandler = (event) => {
-        props.onYearChangeData(event.target.value);
-    };
+const EventFilter = (props) => {
+  const yearChangeHandler = (event) => {
+    props.onYearChangeData(event.target.value);
+  };
 
   return (
     <div className="expenses-filter">
@@ -21,4 +21,4 @@ const ExpenseFilter = (props) => {
   );
 };
 
-export default ExpenseFilter;
+export default EventFilter;

@@ -1,14 +1,14 @@
-import "./ExpensesList.css";
-import ExpenseItem from "./ExpenseItem";
+import "./EventsList.css";
+import EventItem from "./EventItem";
 
-const ExpensesList = (props) => {
+const EventsList = (props) => {
   if (props.items.length === 0) {
     return <h2 className="expenses-list__fallback">No items found.</h2>;
   }
   return (
     <ul className="expenses-list">
       {props.items.map((expense) => (
-        <ExpenseItem
+        <EventItem
           key={expense.id}
           title={expense.title}
           amount={expense.amount}
@@ -19,4 +19,4 @@ const ExpensesList = (props) => {
   );
 };
 
-export default ExpensesList;
+export default EventsList;
