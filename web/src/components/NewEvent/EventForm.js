@@ -33,6 +33,7 @@ const EventForm = (props) => {
 
     const formData = {
       ...userInput,
+      //change to time
       date: new Date(userInput.date),
     };
 
