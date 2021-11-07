@@ -1,0 +1,49 @@
+.button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.CounterButton {
+  height: 2rem;
+  width: 6rem;
+  background-color: #7c0e0e;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 0.1rem;
+}
+
+.CounterButton.toggled {
+  background-color: rgb(135, 224, 0);
+  color: darkgreen;
+}
+
+.buttonName {
+  display: flex;
+  flex-direction: vertical;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+}
+
+.buttonCounter {
+  display: flex;
+  background-color: white;
+  height: 100%;
+  width: 35%;
+  border-radius: 0.4rem;
+  position: absolute;
+  right: 0rem;
+  align-items: center;
+  justify-content: center;
+  object-fit: fill;
+  bottom: 0rem;
+}
