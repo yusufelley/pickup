@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Events from "./components/Expenses/Events";
+import Events from "./components/Events/Events";
 import NewEvent from "./components/NewEvent/NewEvent";
 
 const DUMMY_EXPENSES = [
@@ -35,6 +35,7 @@ const App = () => {
     <div>
       <Events items={expenses} />
       <NewEvent onAddExpense={addExpenseHandler} />
+      <h1>Hello World</h1>
     </div>
   );
 };
