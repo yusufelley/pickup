@@ -65,6 +65,7 @@ const App = () => {
   const [events, setEvents] = useState(DUMMY_EXPENSES);
 
   const addEventHandler = (eventData) => {
+    
     setEvents((prevEvents) => [eventData, ...prevEvents]);
   };
   return (

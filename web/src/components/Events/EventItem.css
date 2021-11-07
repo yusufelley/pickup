@@ -45,6 +45,7 @@
   text-align: center;
   color: white;
   font-weight: bold;
+  font-size: 23px;
 }
 
 .eventProperties {
@@ -55,14 +56,16 @@
   align-items: right;
   justify-content: space-around;
 }
-
+.playing {
+  margin-top: 1rem;
+}
 .startAndDuration {
-  display: box;
+  display: flex;
+  font-weight: 700;
   flex-direction: column;
-  align-items: center;
+  text-align: left;
   align-content: center;
-  text-align: center;
-  float: left;
+  font-size: 18px;
   color: white;
 }
 
@@ -72,6 +75,7 @@
   align-items: center;
   float: right;
   align-self: right;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 580px) {
