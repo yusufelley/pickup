@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Events from "./components/Expenses/Events";
+import Events from "./components/Events/Events";
 import NewEvent from "./components/NewEvent/NewEvent";
 
 const DUMMY_EXPENSES = [
