@@ -10,7 +10,7 @@ const NewEvent = (props) => {
       ...formData,
       id: Math.random().toString(),
     };
-    props.onAddExpense(formData);
+    props.onAddEvent(formData);
     setIsAdding(false);
   };
 

@@ -1,7 +1,8 @@
-import "./EventDate.css";
+// import "./EventDate.css";
+
 
 const EventDate = (props) => {
-  const name = "Basketball"
+  const name = props.sport
 
 
   return (

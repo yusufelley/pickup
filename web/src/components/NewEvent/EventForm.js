@@ -11,8 +11,6 @@ const EventForm = (props) => {
   const sportChangedHandler = (event) => {
     setUserInput((prevState) => {
       // Best practice to use prevState when you rely on the previous state
-      let a = new Date();
-console.log(a.getHours);
       return { ...prevState, sport: event.target.value };
     });
   };
@@ -32,10 +30,17 @@ console.log(a.getHours);
   };
   const submitHandler = (event) => {
     event.preventDefault();
+    var today = new Date();
 
     const formData = {
       ...userInput,
-      date: new Date(userInput.date),
+      time:
+        ((today.getHours() + 11) % 12) +
+        1 +
+        ":" +
+        (today.getMinutes() / 10 < 1
+          ? "0" + today.getMinutes
+          : today.getMinutes),
     };
 
     props.onSaveFormData(formData);
@@ -87,7 +92,17 @@ console.log(a.getHours);
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
-        <button type="submit">Start!</button>
+        <button
+          type="submit"
+          onClick={() => {
+            var today = new Date();
+            console.log(
+              ((today.getHours() + 11) % 12) + 1 + ":" + today.getMinutes()
+            );
+          }}
+        >
+          Start!
+        </button>
       </div>
     </form>
   );
