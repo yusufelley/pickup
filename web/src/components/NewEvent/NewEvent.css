@@ -40,7 +40,7 @@
   .new-expense {
     position: fixed;
     bottom: 0;
-    right: -10px;
+    right: 5px;
     text-align: left;
   }
 }
