@@ -1,9 +1,8 @@
-// import "./EventDate.css";
+import "./EventDate.css";
 
 
 const EventDate = (props) => {
-  const name = props.sport
-
+  const name = props.sport;
 
   return (
     <div className="expense-date">

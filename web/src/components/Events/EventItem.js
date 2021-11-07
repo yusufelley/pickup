@@ -10,12 +10,12 @@ const EventItem = (props) => {
 
   return (
     <Card className="expense-item">
-    <EventDate date={props.date} />
-    <div className="location"> locationName </div>
+    <EventDate sport={props.sport} />
+    <div className="location"> {props.location} </div>
     <div className="eventProperties">
       <div className="startAndDuration">
-        <p> Started at ____</p>
-        <p> Playing for ____</p>
+        <p> Started at {props.time}</p>
+        <p> Playing for {props.duration} minutes</p>
       </div> 
       <div className="numsHereComing"> 
         <CounterButton text = {"Here"} hereToggled={hereToggled} setHereToggled={setHereToggled}/>
