@@ -11,6 +11,7 @@
 
 .new-expense button {
   font: inherit;
+  font-size: 21px;
   cursor: pointer;
   padding: 1rem 2rem;
   border: 1px solid #f1f1f1;
@@ -26,14 +27,14 @@
 }
 
 .new-expense button.alternative {
-  color: #220131;
+  color: #721010;
   border-color: transparent;
   background-color: transparent;
 }
 
 .new-expense button.alternative:hover,
 .new-expense button.alternative:active {
-  background-color: #ddb3f8;
+  background-color: #b83434;
 }
 
 @media only screen and (max-width: 430px) {
@@ -41,6 +42,6 @@
     position: fixed;
     bottom: 0;
     right: 5vw;
-    text-align: left;
+    text-align: center;
   }
 }

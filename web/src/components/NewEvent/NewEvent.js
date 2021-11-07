@@ -10,7 +10,7 @@ const NewEvent = (props) => {
       ...formData,
       id: Math.random().toString(),
     };
-    props.onAddExpense(formData);
+    props.onAddEvent(formData);
     setIsAdding(false);
   };
 
@@ -24,7 +24,7 @@ const NewEvent = (props) => {
 
   return (
     <div className="new-expense">
-      {!isAdding && <button onClick={isAddingHandler}>Start something!</button>}
+      {!isAdding && <button className='font' onClick={isAddingHandler}>Start something!</button>}
       {isAdding && (
         <EventForm
           onSaveFormData={saveFormDataHandler}
