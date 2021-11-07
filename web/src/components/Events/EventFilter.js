@@ -10,7 +10,7 @@ const EventFilter = (props) => {
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
-        <label>Select Sport</label>
+        <label className="selectSport">Select Sport</label>
         <select value={props.selectedSport} onChange={sportChangeHandler}>
           <option value="none" defaultValue>
             All Sports

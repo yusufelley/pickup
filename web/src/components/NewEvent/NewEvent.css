@@ -1,7 +1,6 @@
 .new-expense {
-  background-color: rgb(31, 31, 31);
+  background: white;
   padding: 1rem;
-
   width: 90vw;
   max-width: 95%;
   border-radius: 12px;

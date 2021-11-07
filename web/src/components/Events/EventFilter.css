@@ -2,7 +2,9 @@
   color: white;
   padding: 0 1rem;
 }
-
+.selectSport {
+  font-size: 22px;
+}
 .expenses-filter__control {
   display: flex;
   width: 100%;
