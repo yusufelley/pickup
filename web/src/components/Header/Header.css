@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header-container {
+  color: white;
+  height: 8vh;
+  background: #721010;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  font-size: 24px;
+  margin-left: 2vw;
+}
+
+.logo-container h4 {
+  margin-left: 1vw;
+}
+
+.logo-container img {
+  height: 35px;
+  width: 35px;
+}
+
+.button {
+  height: 30px;
+  width: 30px;
+  margin-right: 1vh;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
