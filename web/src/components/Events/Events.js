@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Events.css";
-import Card from "../UI/Card";
+import div from "../UI/Card";
 import EventFilter from "./EventFilter";
 import EventsList from "./EventsList";
 
@@ -16,14 +16,14 @@ const Events = (props) => {
   );
 
   return (
-    <div>
-      <Card className="expenses">
+    <div className="card-backdrop">
+      <div className="expenses">
         <EventFilter selectedYear={year} onYearChangeData={saveYearData} />
 
         <div className="events-container">
           <EventsList items={filteredExpenses} />
         </div>
-      </Card>
+      </div>
     </div>
   );
 };
