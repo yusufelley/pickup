@@ -30,11 +30,17 @@ const EventForm = (props) => {
   };
   const submitHandler = (event) => {
     event.preventDefault();
+    var today = new Date();
 
     const formData = {
       ...userInput,
-      //change to time
-      date: new Date(userInput.date),
+      time:
+        ((today.getHours() + 11) % 12) +
+        1 +
+        ":" +
+        (today.getMinutes() / 10 < 1
+          ? "0" + today.getMinutes
+          : today.getMinutes),
     };
 
     props.onSaveFormData(formData);
@@ -86,8 +92,17 @@ const EventForm = (props) => {
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
-        <button type="submit" onClick={() => {var today = new Date()
-            console.log(((today.getHours() + 11) % 12 + 1) + ':' + today.getMinutes())}}>Start!</button>
+        <button
+          type="submit"
+          onClick={() => {
+            var today = new Date();
+            console.log(
+              ((today.getHours() + 11) % 12) + 1 + ":" + today.getMinutes()
+            );
+          }}
+        >
+          Start!
+        </button>
       </div>
     </form>
   );

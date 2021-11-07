@@ -8,7 +8,7 @@ const DUMMY_EXPENSES = [
   {
     sport: "Basketball",
     location: "Rec Center",
-    time: "currTime",
+    time: "test",
     duration: 120,
   },
   {
