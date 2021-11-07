@@ -41,7 +41,7 @@
   .new-expense {
     position: fixed;
     bottom: 0;
-    right: 5px;
+    right: 5vw;
     text-align: left;
   }
 }
