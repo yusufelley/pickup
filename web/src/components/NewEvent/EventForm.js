@@ -3,29 +3,29 @@ import "./EventForm.css";
 
 const EventForm = (props) => {
   const [userInput, setUserInput] = useState({
-    title: "",
-    amount: "",
-    date: "",
+    sport: "",
+    location: "",
+    duration: "",
   });
 
-  const titleChangedHandler = (event) => {
+  const sportChangedHandler = (event) => {
     setUserInput((prevState) => {
       // Best practice to use prevState when you rely on the previous state
-      return { ...prevState, title: event.target.value };
+      return { ...prevState, sport: event.target.value };
     });
   };
 
-  const amountChangedHandler = (event) => {
+  const locationChangedHandler = (event) => {
     setUserInput((prevState) => {
       // Best practice to use prevState when you rely on the previous state
-      return { ...prevState, amount: event.target.value };
+      return { ...prevState, location: event.target.value };
     });
   };
 
-  const dateChangedHandler = (event) => {
+  const durationChangedHandler = (event) => {
     setUserInput((prevState) => {
       // Best practice to use prevState when you rely on the previous state
-      return { ...prevState, date: event.target.value };
+      return { ...prevState, duration: event.target.value };
     });
   };
   const submitHandler = (event) => {
@@ -33,15 +33,16 @@ const EventForm = (props) => {
 
     const formData = {
       ...userInput,
+      //change to time
       date: new Date(userInput.date),
     };
 
     props.onSaveFormData(formData);
 
     setUserInput({
-      title: "",
-      amount: "",
-      date: "",
+      sport: "",
+      location: "",
+      duration: "",
     });
   };
 
@@ -53,33 +54,31 @@ const EventForm = (props) => {
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
-          <label>Title</label>
+          <label>Sport/Event</label>
           <input
             type="text"
-            value={userInput.title}
+            value={userInput.sport}
             required
-            onChange={titleChangedHandler}
+            onChange={sportChangedHandler}
           />
         </div>
         <div className="new-expense__control">
-          <label>Amount</label>
+          <label>Location</label>
+          <input
+            type="text"
+            value={userInput.location}
+            required
+            onChange={locationChangedHandler}
+          />
+        </div>
+        <div className="new-expense__control">
+          <label>Duration</label>
           <input
             type="number"
-            min="0.01"
-            step="0.01"
-            required
-            value={userInput.amount}
-            onChange={amountChangedHandler}
-          />
-        </div>
-        <div className="new-expense__control">
-          <label>Date</label>
-          <input
-            type="date"
-            min="2021-08-11"
-            max="2023-01-01"
-            value={userInput.date}
-            onChange={dateChangedHandler}
+            min="15"
+            max="120"
+            value={userInput.duration}
+            onChange={durationChangedHandler}
           />
         </div>
       </div>
@@ -87,7 +86,8 @@ const EventForm = (props) => {
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
-        <button type="submit">Add Expense</button>
+        <button type="submit" onClick={() => {var today = new Date()
+            console.log(((today.getHours() + 11) % 12 + 1) + ':' + today.getMinutes())}}>Start!</button>
       </div>
     </form>
   );
