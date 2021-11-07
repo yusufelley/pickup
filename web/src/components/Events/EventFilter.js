@@ -2,19 +2,25 @@ import React from "react";
 import "./EventFilter.css";
 
 const EventFilter = (props) => {
-  const yearChangeHandler = (event) => {
-    props.onYearChangeData(event.target.value);
+  const sportChangeHandler = (event) => {
+    props.onSportChangeData(event.target.value);
+    console.log(event.target.value);
   };
 
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
-        <label>Select Year</label>
-        <select value={props.selectedYear} onChange={yearChangeHandler}>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option>
+        <label>Select Sport</label>
+        <select value={props.selectedSport} onChange={sportChangeHandler}>
+          <option value="none" defaultValue>
+            All Sports
+          </option>
+          <option value="Basketball">Basketball</option>
+          <option value="Soccer">Soccer</option>
+          <option value="Football">Football</option>
+          <option value="Volleyball">Volleyball</option>
+          <option value="Quidditch">Quidditch</option>
+          <option value="Rugby">Rugby</option>
         </select>
       </div>
     </div>

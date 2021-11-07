@@ -3,16 +3,20 @@ import EventItem from "./EventItem";
 
 const EventsList = (props) => {
   if (props.items.length === 0) {
-    return <h2 className="expenses-list__fallback">No items found.</h2>;
+    return (
+      <h2 className="expenses-list__fallback">
+        Nothing Going On...Start Something!.
+      </h2>
+    );
   }
   return (
     <ul className="expenses-list">
-      {props.items.map((expense) => (
+      {props.items.map((event) => (
         <EventItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
+          sport={event.sport}
+          location={event.location}
+          time={event.time}
+          duration={event.duration}
         />
       ))}
     </ul>

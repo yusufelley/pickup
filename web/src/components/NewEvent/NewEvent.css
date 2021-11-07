@@ -14,7 +14,7 @@
   cursor: pointer;
   padding: 1rem 2rem;
   border: 1px solid #f1f1f1;
-  background-color: #a40000;
+  background-color: #721010;
   color: white;
   border-radius: 12px;
   margin-right: 1rem;
@@ -22,8 +22,8 @@
 
 .new-expense button:hover,
 .new-expense button:active {
-  background-color: #510674;
-  border-color: #510674;
+  background-color: #ff7b00;
+  border-color: #ff7b00;
 }
 
 .new-expense button.alternative {
@@ -37,8 +37,7 @@
   background-color: #ddb3f8;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 430px) {
   .new-expense {
-    background: aquamarine;
   }
 }
