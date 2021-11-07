@@ -19,7 +19,10 @@ const Events = (props) => {
     <div>
       <Card className="expenses">
         <EventFilter selectedYear={year} onYearChangeData={saveYearData} />
-        <EventsList items={filteredExpenses} />
+
+        <div className="events-container">
+          <EventsList items={filteredExpenses} />
+        </div>
       </Card>
     </div>
   );
