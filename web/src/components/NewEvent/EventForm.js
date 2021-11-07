@@ -39,8 +39,8 @@ const EventForm = (props) => {
         1 +
         ":" +
         (today.getMinutes() / 10 < 1
-          ? "0" + today.getMinutes
-          : today.getMinutes),
+          ? "0" + today.getMinutes()
+          : today.getMinutes()),
     };
 
     props.onSaveFormData(formData);
