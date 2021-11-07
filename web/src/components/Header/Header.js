@@ -10,7 +10,7 @@ const Header = () => {
           <span>
             <MdSportsVolleyball className="icon"></MdSportsVolleyball>
           </span>
-          <h4 className="logo">PickPocket</h4>
+          <h4 className="logo">Pocket Pick-Up</h4>
         </div>
         <div>
           <span>

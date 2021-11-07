@@ -3,6 +3,9 @@
   padding: 0;
 }
 
+body {
+  background: rgb(31, 31, 31);
+}
 .App {
   text-align: center;
   background: gray;
