@@ -15,7 +15,7 @@ const EventItem = (props) => {
     <div className="eventProperties">
       <div className="startAndDuration">
         <p> Started at {props.time}</p>
-        <p> Playing for {props.duration} minutes</p>
+        <p> Playing for {Math.floor(props.duration/60)}h; {props.duration%60}m</p>
       </div> 
       <div className="numsHereComing"> 
         <CounterButton text = {"Here"} hereToggled={hereToggled} setHereToggled={setHereToggled}/>
